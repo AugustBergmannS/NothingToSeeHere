@@ -13,10 +13,16 @@ body {
     "footer";
 }
 
+.orange{
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
 //Þetta er BYRJUN animation partsins -----------------T~T-----------------
 
 
-.hreyfing{
+#hreyfing{
   height:100px;
   width:100px;
   margin:0 auto;
@@ -27,9 +33,22 @@ body {
   transition: width 2s, height 4s;
 }
 
-.hreyfing:hover{
+#hreyfing:hover{
   width: 300px;
   height: 300px;
+}
+
+#hreyfing img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#hreyfing img.top:hover {
+  opacity:0;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -145,12 +164,36 @@ header {
 footer {
   background: rgb(151, 28, 96); 
 }
-  
-header,
-.content,
-footer {
-  padding: 1em; 
+
+.midja{
+  background: rgb(196, 47, 216);
 }
+
+.midja{
+  grid-area: midja;
+}
+
+.vinstri{
+ grid-area: vinstri;
+}
+
+
+header,
+footer,
+.midja,
+.vinstri, 
+.haegri {
+padding: 1em; 
+}
+
+.content {
+  display: grid; /* grid erfist til barna (child element only) */
+  grid-gap: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "vinstri midja"
+    "vinstri midja";
+  }
 
 header h1 {
   color: #fff;
