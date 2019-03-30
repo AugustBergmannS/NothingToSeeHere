@@ -12,6 +12,43 @@ body {
     "content"
     "footer";
 }
+
+//Þetta er BYRJUN animation partsins -----------------T~T-----------------
+
+
+.hreyfing{
+  height:100px;
+  width:100px;
+  margin:0 auto;
+  position: relative;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+  -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s, height 4s;
+}
+
+.hreyfing:hover{
+  width: 300px;
+  height: 300px;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  0% {left: 0px;}
+  30% {left: 200px;}  
+  60% {left: 200px;}
+  100% {left: 0px;}
+}
+
+@keyframes mymove {
+  0% {left: 0px;}
+  30% {left: 200px;}  
+  60% {left: 200px;}
+  100% {left: 0px;}
+}
+
+//Þetta er ENDIR animation partsins -----------------T~T-----------------
+
 //Þetta er navbar byrjun -----------------T~T-----------------
 .navbar {
   overflow: hidden;
